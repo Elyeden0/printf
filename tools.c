@@ -6,7 +6,7 @@
 /*   By: abonnard <abonnard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 11:53:19 by abonnard          #+#    #+#             */
-/*   Updated: 2024/11/21 15:54:53 by abonnard         ###   ########.fr       */
+/*   Updated: 2024/11/22 11:55:50 by abonnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int	ft_putstr(char *str)
 {
     int count = 0;
 
+    if (!str)
+        return ft_putstr("(null)");
     while (*str)
         count += ft_putchar(*str++);
     return count;
